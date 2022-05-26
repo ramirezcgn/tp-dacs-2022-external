@@ -1,7 +1,7 @@
-import Repository from './ExternalRepository';
+import ExternalRepository from './ExternalRepository';
 import Transp from '../models/Transp';
 
-export default class TranspRepository implements Repository {
+export default class TranspRepository implements ExternalRepository {
   get(id) {
     return Transp.findByPk(id);
   }
