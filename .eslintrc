@@ -1,0 +1,61 @@
+{
+  "root": true,
+  "env": {
+    "es2020": true,
+    "jest": true,
+    "node": true
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "airbnb-base",
+    "prettier"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 11,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "import",
+    "@typescript-eslint",
+    "prettier"
+  ],
+  "settings": {
+    "import/extensions": [".js", ".ts"],
+    "import/resolver": {
+      "typescript": {
+        "project": "./tsconfig.json"
+      },
+      "node": {
+        "extensions": [".js", ".ts"]
+      }
+    }
+  },
+  "rules": {
+    "no-console":"off",
+    "arrow-parens": [
+      "error",
+      "always"
+    ],
+    "spaced-comment": "off",
+    "class-methods-use-this": "off",
+    "linebreak-style": ["error", "windows"],
+    "no-restricted-syntax": "off",
+    "import/extensions": [
+      2,
+      "ignorePackages",
+      {
+        "js": "never",
+        "ts": "never"
+      }
+    ],
+    "import/no-mutable-exports": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/ban-types": "off",
+    "@typescript-eslint/explicit-module-boundary-types": "off"
+  },
+  "ignorePatterns": ["**/*.json"]
+}

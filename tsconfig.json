@@ -1,0 +1,43 @@
+{
+  "compilerOptions": {
+    "incremental": true,
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "dom",
+      "esnext"
+    ],
+    "allowJs": true,
+    "checkJs": false,
+    "composite": true,
+    "noEmit": false,
+    "declaration": true,
+    "declarationMap": true,
+    "sourceMap": true,
+    "skipLibCheck": true,
+    "isolatedModules": true,
+    "strict": true,
+    "moduleResolution": "node",
+    "noImplicitAny": false,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "useUnknownInCatchVariables": false,
+    "esModuleInterop": true,
+    "resolveJsonModule": true,
+    "experimentalDecorators": true,
+    "allowSyntheticDefaultImports": true,
+    "suppressImplicitAnyIndexErrors": true,
+    "forceConsistentCasingInFileNames": true,
+    "types": [
+      "jest",
+      "node"
+    ],
+    "baseUrl": "./src"
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src", "src/**/*.json"],
+  "exclude": ["node_modules"],
+  "rootDirs": ["./src"]
+}
