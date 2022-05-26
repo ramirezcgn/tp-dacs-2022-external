@@ -7,7 +7,7 @@ const Transp = sequelize.define(
   'Transp',
   {
     idService: {
-      type: Sequelize.NUMBER,
+      type: Sequelize.STRING,
       unique: true,
     },
     name: {

@@ -7,7 +7,7 @@ const Stay = sequelize.define(
   'Stays',
   {
     idService: {
-      type: Sequelize.NUMBER,
+      type: Sequelize.STRING,
       unique: true,
     },
     name: {

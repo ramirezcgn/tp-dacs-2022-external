@@ -29,7 +29,7 @@ const ShowController = () => {
 
   const select = async (req, res) => {
     try {
-      const show = await showService().select(req.params.id, req.body.places);
+      const show = await showService().select(req.params.id, parseInt(req.body.places, 10));
       if (!show) {
         return res.status(400).json({ msg: 'Bad Request: Model not found' });
       }

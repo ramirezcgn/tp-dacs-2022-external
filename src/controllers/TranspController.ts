@@ -31,7 +31,7 @@ const TranspController = () => {
     try {
       const transp = await transpService().select(
         req.params.id,
-        req.body.places,
+        parseInt(req.body.places, 10),
       );
       if (!transp) {
         return res.status(400).json({ msg: 'Bad Request: Model not found' });

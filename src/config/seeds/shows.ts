@@ -29,7 +29,7 @@ export default () =>
       },
     ],
     {
-      fields: ['idService', 'name', 'description', 'amount', 'date'],
+      fields: ['idService', 'name', 'description', 'amount', 'date', 'places'],
       ignoreDuplicates: true,
     },
   );

@@ -32,7 +32,7 @@ export default () =>
       },
     ],
     {
-      fields: ['idService', 'name', 'amount', 'fromDate', 'toDate', 'type'],
+      fields: ['idService', 'name', 'amount', 'fromDate', 'toDate', 'type', 'places'],
       ignoreDuplicates: true,
     },
   );

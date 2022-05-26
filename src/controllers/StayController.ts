@@ -29,7 +29,7 @@ const StayController = () => {
 
   const select = async (req, res) => {
     try {
-      const stay = await stayService().select(req.params.id, req.body.places);
+      const stay = await stayService().select(req.params.id, parseInt(req.body.places, 10));
       if (!stay) {
         return res.status(400).json({ msg: 'Bad Request: Model not found' });
       }

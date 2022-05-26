@@ -6,8 +6,8 @@ const tableName = 'shows';
 const Show = sequelize.define(
   'Show',
   {
-    idShow: {
-      type: Sequelize.NUMBER,
+    idService: {
+      type: Sequelize.STRING,
       unique: true,
     },
     name: {
