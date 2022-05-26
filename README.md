@@ -1,7 +1,9 @@
 ## Run in docker
 
+```sh
 docker build . -t tp-dacs-2022-external
 docker run -p 3001:3001 -d tp-dacs-2022-external
+```
 
 ## Install and Use
 
