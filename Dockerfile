@@ -16,7 +16,7 @@ RUN npm install
 COPY . .
 
 EXPOSE 4000
-EXPOSE 9229
+EXPOSE 9230
 
 VOLUME ["./src:/usr/src/app/src", "./db:/usr/src/app/db"]
 
