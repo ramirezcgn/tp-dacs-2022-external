@@ -1,5 +1,7 @@
 .github
 .husky
 .vscode
+db
+src
 node_modules
 npm-debug.log

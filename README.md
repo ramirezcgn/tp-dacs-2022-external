@@ -2,7 +2,7 @@
 
 ```sh
 docker build . -t tp-dacs-2022-external
-docker run -p 3001:3001 -d tp-dacs-2022-external
+docker run -p 4000:4000 -p 9229:9229 -d tp-dacs-2022-external
 ```
 
 ## Install and Use
