@@ -15,7 +15,7 @@ RUN npm install
 # Bundle app source
 COPY . .
 
-EXPOSE 3001
+EXPOSE 4000
 
 VOLUME ["/usr/src/app/db"]
 
