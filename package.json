@@ -7,7 +7,7 @@
     "prestart": "npm run drop-sqlite-db || true",
     "start": "cross-env NODE_ENV=development npm run nodemon",
     "poststart": "npm run create-sqlite-db && npm run seed-sqlite-db",
-    "nodemon": "nodemon -L --experimental-specifier-resolution=node ./src/api.ts",
+    "nodemon": "nodemon -L --exec \"node --inspect=0.0.0.0:9230 --experimental-specifier-resolution=node --loader ts-node/esm src/api.ts\"",
     "create-sqlite-db": "shx touch ./db/database.sqlite",
     "drop-sqlite-db": "shx rm ./db/database.sqlite",
     "seed-sqlite-db": "npx sequelize-cli db:seed:all",
