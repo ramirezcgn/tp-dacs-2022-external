@@ -2,16 +2,18 @@ import ShowRepository from '../repositories/ShowRepository';
 
 const show = new ShowRepository();
 
-const showService = () => {
-  const get = (id) => show.get(id);
-  const getAll = () => show.getAll();
-  const select = (id, places) => show.select(id, places);
+class ShowService {
+  get(id) {
+    return show.get(id);
+  }
 
-  return {
-    get,
-    getAll,
-    select,
-  };
-};
+  getAll() {
+    return show.getAll();
+  }
 
-export default showService;
+  select(id, places) {
+    return show.select(id, places);
+  }
+}
+
+export default new ShowService();

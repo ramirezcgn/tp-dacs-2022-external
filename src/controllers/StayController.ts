@@ -1,7 +1,7 @@
 import stayService from '../services/stayService';
 
-const StayController = () => {
-  const getAll = async (req, res) => {
+export default class StayController {
+  async getAll(req, res) {
     try {
       const stays = await stayService().getAll();
       if (!stays) {
@@ -12,9 +12,9 @@ const StayController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
+  }
 
-  const get = async (req, res) => {
+  async get(req, res) {
     try {
       const stay = await stayService().get(req.params.id);
       if (!stay) {
@@ -25,9 +25,9 @@ const StayController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
+  }
 
-  const select = async (req, res) => {
+  async select(req, res) {
     try {
       const stay = await stayService().select(req.params.id, parseInt(req.body.places, 10));
       if (!stay) {
@@ -38,13 +38,5 @@ const StayController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
-
-  return {
-    getAll,
-    get,
-    select,
-  };
-};
-
-export default StayController;
+  }
+}

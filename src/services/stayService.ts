@@ -2,16 +2,18 @@ import StayRepository from '../repositories/StayRepository';
 
 const stay = new StayRepository();
 
-const stayService = () => {
-  const get = (id) => stay.get(id);
-  const getAll = () => stay.getAll();
-  const select = (id, places) => stay.select(id, places);
+class StayService {
+  get(id) {
+    return stay.get(id);
+  }
 
-  return {
-    get,
-    getAll,
-    select,
-  };
-};
+  getAll() {
+    return stay.getAll();
+  }
 
-export default stayService;
+  select(id, places) {
+    return stay.select(id, places);
+  }
+}
+
+export default new StayService();

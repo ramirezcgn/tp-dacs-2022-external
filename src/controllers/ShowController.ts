@@ -1,7 +1,7 @@
 import showService from '../services/showService';
 
-const ShowController = () => {
-  const getAll = async (req, res) => {
+export default class ShowController {
+  async getAll(req, res) {
     try {
       const shows = await showService().getAll();
       if (!shows) {
@@ -12,9 +12,9 @@ const ShowController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
+  }
 
-  const get = async (req, res) => {
+  async get(req, res) {
     try {
       const show = await showService().get(req.params.id);
       if (!show) {
@@ -25,9 +25,9 @@ const ShowController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
+  }
 
-  const select = async (req, res) => {
+  async select(req, res) {
     try {
       const show = await showService().select(req.params.id, parseInt(req.body.places, 10));
       if (!show) {
@@ -38,13 +38,6 @@ const ShowController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
+  }
+}
 
-  return {
-    getAll,
-    get,
-    select,
-  };
-};
-
-export default ShowController;

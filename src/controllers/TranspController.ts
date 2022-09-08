@@ -1,7 +1,7 @@
 import transpService from '../services/transpService';
 
-const TranspController = () => {
-  const getAll = async (req, res) => {
+export default class TranspController {
+  async getAll(req, res) {
     try {
       const transps = await transpService().getAll();
       if (!transps) {
@@ -12,9 +12,9 @@ const TranspController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
+  }
 
-  const get = async (req, res) => {
+  async get(req, res) {
     try {
       const transp = await transpService().get(req.params.id);
       if (!transp) {
@@ -25,9 +25,9 @@ const TranspController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
+  }
 
-  const select = async (req, res) => {
+  async select(req, res) {
     try {
       const transp = await transpService().select(
         req.params.id,
@@ -41,13 +41,5 @@ const TranspController = () => {
       console.log(err);
       return res.status(500).json({ msg: 'Internal server error' });
     }
-  };
-
-  return {
-    getAll,
-    get,
-    select,
-  };
-};
-
-export default TranspController;
+  }
+}

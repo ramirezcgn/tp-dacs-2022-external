@@ -2,16 +2,18 @@ import TranspRepository from '../repositories/TranspRepository';
 
 const transp = new TranspRepository();
 
-const transpService = () => {
-  const get = (id) => transp.get(id);
-  const getAll = () => transp.getAll();
-  const select = (id, places) => transp.select(id, places);
+class TranspService {
+  get(id) {
+    return transp.get(id);
+  }
 
-  return {
-    get,
-    getAll,
-    select,
-  };
-};
+  getAll() {
+    return transp.getAll();
+  }
 
-export default transpService;
+  select(id, places) {
+    return transp.select(id, places);
+  }
+}
+
+export default new TranspService();
