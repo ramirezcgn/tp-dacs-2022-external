@@ -41,7 +41,7 @@
     "sqlite3": "^5.0.8"
   },
   "devDependencies": {
-    "@goldstack/nodemonx": "0.3.32",
+    "@goldstack/nodemonx": "0.4.5",
     "@goldstack/utils-typescript-references": "0.1.13",
     "@types/express": "^4.17.13",
     "@types/jest": "^27.5.1",
